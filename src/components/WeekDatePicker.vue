@@ -1,5 +1,6 @@
 <template>
 	<div class="weekly-calendar">
+		{{ showMonth }}
 		<div class="controls">
 			<button class="prev-btn" @click="prevWeek">Prev</button>
 			<button class="next-btn" @click="nextWeek">Next</button>
