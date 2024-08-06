@@ -1,5 +1,16 @@
-# Vue 3 + Vite
+# Week-Date-picker 一个基于Vue3的周历(Weekly Calendar)组件,用于显示当前周的日期,并提供了上一周和下一周的导航功能
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+![alt text](/public/preview.png)
 
-Learn more about IDE Support for Vue in the [Vue Docs Scaling up Guide](https://vuejs.org/guide/scaling-up/tooling.html#ide-support).
+运行本项目或直接将`WeekDatePricker.vue`文件拷贝到您的工程中
+
+```js
+	// 1.拉取项目
+	git clone https://github.com/zxxj/weekDatePicker.git
+	
+	// 2.安装依赖: pnpm或其他包管理工具
+	pnpm i
+
+	// 3.运行项目
+	pnpm dev
+```
