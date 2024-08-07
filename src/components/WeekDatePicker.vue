@@ -1,9 +1,11 @@
 <template>
 	<div class="weekly-calendar">
-		{{ showMonth }}
+		<div class="currentYearAndMonth">
+			{{ showMonth }}
+		</div>
 		<div class="controls">
-			<button class="prev-btn" @click="prevWeek">Prev</button>
-			<button class="next-btn" @click="nextWeek">Next</button>
+			<img src="/src/assets/prev.png" class="prev-btn" @click="prevWeek" />
+			<img src="/src/assets/next.png" class="next-btn" @click="nextWeek" />
 		</div>
 		<div class="days">
 			<div class="day-labels">
@@ -103,7 +105,7 @@ setToday();
 
 <style scoped>
 .weekly-calendar {
-	max-width: 500px;
+	max-width: 270px;
 	margin: 0 auto;
 	font-family: Arial, sans-serif;
 }
@@ -113,6 +115,7 @@ setToday();
 }
 
 .weekly-calendar .controls {
+	position: relative;
 	display: flex;
 	justify-content: space-between;
 	margin-bottom: 20px;
@@ -139,9 +142,10 @@ setToday();
 
 .weekly-calendar .day-cell {
 	flex: 1;
-	padding: 10px;
 	text-align: center;
 	font-size: 14px;
+	cursor: pointer;
+	transition: all .5s;
 }
 
 .weekly-calendar .today {
@@ -152,5 +156,28 @@ setToday();
 
 .weekly-calendar .not-in-month {
 	color: #ccc;
+}
+
+.day-number {
+	padding: 10px;
+}
+
+.prev-btn,
+.next-btn {
+	position: absolute;
+}
+
+.prev-btn {
+	top: 35px;
+	left: -40px;
+}
+
+.next-btn {
+	top: 35px;
+	right: -40px;
+}
+
+.currentYearAndMonth {
+	text-align: center;
 }
 </style>
