@@ -58,14 +58,21 @@ const days = computed(() => {
 const setToday = () => {
   const firstDayOfWeek = 1;
   const today = new Date();
+
+  const offset = today.getDay() === 0 ? -6 : 1 - today.getDay(); // 修复周日返回 0 的问题
   const currentWeekStart = new Date(
-    today.getTime() - (today.getDay() - firstDayOfWeek) * 24 * 60 * 60 * 1000,
+    today.getFullYear(),
+    today.getMonth(),
+    today.getDate() + offset
   );
+
   currentWeek.value.start = currentWeekStart;
   currentWeek.value.end = new Date(
-    currentWeekStart.getTime() + 6 * 24 * 60 * 60 * 1000,
+    currentWeekStart.getTime() + 6 * 24 * 60 * 60 * 1000
   );
-  seShowMonth(currentWeek.value.start);
+
+  checkIndex.value = today.getDay() === 0 ? 6 : today.getDay() - 1; // 默认选中今天
+  seShowMonth(today); // 显示今天
 };
 
 const seShowMonth = (day) => {
