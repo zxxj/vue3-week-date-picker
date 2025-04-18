@@ -3,17 +3,17 @@
 ![alt text](/public/x.png)
 
 ```js
-	// npm / yarn / pnpm => install 
-	pnpm install week-date-picker-vue3
+  // npm / yarn / pnpm => install 
+  pnpm install week-date-picker-vue3
 
-	// use
-	<script setup>
-	import WeekDatePicker from 'week-date-picker-vue3'
-	</script>
+  // use
+  <script setup>
+    import WeekDatePicker from 'week-date-picker-vue3'
+  </script>
 
-	<template>
-		<div>
-			<WeekDatePicker />
-		</div>
-	</template>
+  <template>
+    <div>
+      <WeekDatePicker />
+    </div>
+  </template>
 ```
