@@ -3,7 +3,7 @@ import WeekDatePicker from 'week-date-picker-vue3'
 </script>
 
 <template>
-  <div >
+  <div>
     <WeekDatePicker />
   </div>
 </template>
