@@ -3,7 +3,7 @@
 ![alt text](/public/x.png)
 
 ```js
-	// npm / yarn / pnpm => install 
+	// npm/yarn/pnpm => install 
 	pnpm install week-date-picker-vue3
 
 	// use
